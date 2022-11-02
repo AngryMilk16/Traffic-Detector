@@ -1,5 +1,4 @@
 import cv2
-import matplotlib as mpt
 
 cap = cv2.VideoCapture("Objects/Car1.mp4") #opens the path for video
 
@@ -31,7 +30,7 @@ while True:
         
         area = cv2.contourArea(cnt)
         if area > 800:
-            #cv2.drawContours(roi, [cnt], -1, (255, 0, 0), 2) #this highlights objects in green
+            #cv2.drawContours(roi, [cnt], -1, (255, 0, 0), 2) #this highlights objects in blue
             x,y,w,h = cv2.boundingRect(cnt)
             cv2.rectangle(roi, (x,y), (x + w, y +h), (0, 255, 0), 2)
 

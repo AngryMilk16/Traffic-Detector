@@ -42,5 +42,5 @@ while True:
     if cv2.waitKey(20) & 0xFF==ord('d'): #0xFF==ord('d') mean that if the letter 'd' is pressed on the keyboard it closes video
         break
 
-cap.release
+cap.release()
 cv2.destroyAllWindows()
